@@ -38,10 +38,10 @@ namespace API
         {
             services.AddApplicationServices(_config);
             services.AddControllers();            
-            /*services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "v1" });
-            });*/
+            });
             services.AddCors();
             services.AddIdentityServices(_config);
         }
@@ -53,7 +53,7 @@ namespace API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                // app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
+                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebAPIv5 v1"));
             }
 
             app.UseHttpsRedirection();
