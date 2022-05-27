@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Member } from './../_models/member';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lists',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lists.component.css']
 })
 export class ListsComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
